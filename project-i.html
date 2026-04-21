@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project I — Julia Perczel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="site-title">Julia Perczel</a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav>
+        <ul class="nav-list" id="nav-list">
+          <li><a href="index.html">About</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle active">Projects</a>
+            <ul class="dropdown-menu">
+              <li><a href="project-i.html" class="active">Project I</a></li>
+              <li><a href="project-ii.html">Project II</a></li>
+            </ul>
+          </li>
+          <li><a href="publications.html">Publications</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>Heritage and Belonging in the Danube Region</h1>
+        <p class="subtitle">Ethnographic perspectives on cultural continuity and displacement</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-heading">About the Project</h2>
+        <p>This project examines how communities along the Danube construct and contest heritage narratives in the context of political transformation and cross-border mobility. Drawing on eighteen months of ethnographic fieldwork across Hungary and Romania, it traces the everyday practices through which belonging is negotiated at the intersection of kinship, place, and institutional governance.</p>
+        <p>A central concern is how heritage regimes — both state-led and grassroots — mediate relationships between displaced populations and the landscapes they claim as home. The research contributes to anthropological debates on the politics of memory, material culture, and the affective dimensions of placemaking.</p>
+        <p>The project combines participant observation, life-history interviews, and archival research to build a multi-layered account of how cultural continuity is maintained, improvised, and sometimes deliberately ruptured across generations.</p>
+
+        <div class="detail-cards">
+          <div class="detail-card">
+            <strong>Funder</strong>
+            European Research Council (ERC)
+          </div>
+          <div class="detail-card">
+            <strong>Duration</strong>
+            2022–2025
+          </div>
+          <div class="detail-card">
+            <strong>Collaborators</strong>
+            Prof. A. Kovács (Budapest), Dr. M. Dragomir (Cluj-Napoca)
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-heading">Related Publications</h2>
+        <div class="pub-entry">
+          <p class="authors"><span class="highlight">Perczel, J.</span> (2024)</p>
+          <p class="pub-title">Dwelling in displacement: heritage practices along the middle Danube</p>
+          <p class="pub-venue">Journal of the Royal Anthropological Institute, 30(2), 312–330.</p>
+        </div>
+        <div class="pub-entry">
+          <p class="authors"><span class="highlight">Perczel, J.</span> &amp; Kovács, A. (2023)</p>
+          <p class="pub-title">Borders, bridges, belonging: ethnographic reflections on cross-river communities</p>
+          <p class="pub-venue">Social Anthropology, 31(4), 45–63.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span>&copy; 2026 Julia Perczel · <a href="mailto:julia.perczel@anthro.ox.ac.uk">julia.perczel@anthro.ox.ac.uk</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var btn = document.querySelector('.menu-toggle');
+      var nav = document.getElementById('nav-list');
+      btn.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open);
+      });
+    })();
+  </script>
+
+</body>
+</html>

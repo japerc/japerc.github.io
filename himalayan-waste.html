@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project II — Julia Perczel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="site-title">Julia Perczel</a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav>
+        <ul class="nav-list" id="nav-list">
+          <li><a href="index.html">About</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle active">Projects</a>
+            <ul class="dropdown-menu">
+              <li><a href="project-i.html">Project I</a></li>
+              <li><a href="project-ii.html" class="active">Project II</a></li>
+            </ul>
+          </li>
+          <li><a href="publications.html">Publications</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>Institutional Lives: Bureaucracy and Care in Post-Socialist Settings</h1>
+        <p class="subtitle">An ethnography of welfare institutions and their subjects</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-heading">About the Project</h2>
+        <p>This project investigates the relationship between state bureaucracy and everyday experiences of care in post-socialist welfare institutions. Based on fieldwork conducted in residential care homes and municipal welfare offices in Hungary, it asks how institutional routines shape — and are shaped by — the moral worlds of both staff and residents.</p>
+        <p>The research attends to the materiality of bureaucratic practice: the forms, registers, and spatial arrangements through which care is administered and experienced. It argues that institutional ethnography reveals not only the failures of welfare systems but also the creative labour through which people sustain dignity and connection within them.</p>
+        <p>By situating these micro-level practices within broader histories of state socialism and its aftermath, the project contributes to comparative anthropological understandings of institutional care, personhood, and post-socialist transformation.</p>
+
+        <div class="detail-cards">
+          <div class="detail-card">
+            <strong>Funder</strong>
+            Leverhulme Trust
+          </div>
+          <div class="detail-card">
+            <strong>Duration</strong>
+            2024–2027
+          </div>
+          <div class="detail-card">
+            <strong>Collaborators</strong>
+            Dr. E. Németh (Pécs), Prof. R. Humphrey (Cambridge)
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-heading">Related Publications</h2>
+        <div class="pub-entry">
+          <p class="authors"><span class="highlight">Perczel, J.</span> (2025)</p>
+          <p class="pub-title">Paper care: bureaucratic form and moral practice in a Hungarian care home</p>
+          <p class="pub-venue">Ethnos (forthcoming).</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span>&copy; 2026 Julia Perczel · <a href="mailto:julia.perczel@anthro.ox.ac.uk">julia.perczel@anthro.ox.ac.uk</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var btn = document.querySelector('.menu-toggle');
+      var nav = document.getElementById('nav-list');
+      btn.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open);
+      });
+    })();
+  </script>
+
+</body>
+</html>

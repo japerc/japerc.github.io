@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publications — Julia Perczel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="site-title">Julia Perczel</a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav>
+        <ul class="nav-list" id="nav-list">
+          <li><a href="index.html">About</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Projects</a>
+            <ul class="dropdown-menu">
+              <li><a href="project-i.html">Project I</a></li>
+              <li><a href="project-ii.html">Project II</a></li>
+            </ul>
+          </li>
+          <li><a href="publications.html" class="active">Publications</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>Publications</h1>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+
+        <!-- Journal Articles -->
+        <div class="pub-group">
+          <h2 class="section-heading">Journal Articles</h2>
+
+          <div class="pub-entry">
+            <p class="authors"><span class="highlight">Perczel, J.</span> (2025)</p>
+            <p class="pub-title">Paper care: bureaucratic form and moral practice in a Hungarian care home</p>
+            <p class="pub-venue">Ethnos (forthcoming).</p>
+          </div>
+
+          <div class="pub-entry">
+            <p class="authors"><span class="highlight">Perczel, J.</span> (2024)</p>
+            <p class="pub-title">Dwelling in displacement: heritage practices along the middle Danube</p>
+            <p class="pub-venue">Journal of the Royal Anthropological Institute, 30(2), 312–330.</p>
+            <p class="pub-doi"><a href="#">doi:10.1111/jrai.2024.00123</a></p>
+          </div>
+
+          <div class="pub-entry">
+            <p class="authors"><span class="highlight">Perczel, J.</span> &amp; Kovács, A. (2023)</p>
+            <p class="pub-title">Borders, bridges, belonging: ethnographic reflections on cross-river communities</p>
+            <p class="pub-venue">Social Anthropology, 31(4), 45–63.</p>
+            <p class="pub-doi"><a href="#">doi:10.1017/sa.2023.0045</a></p>
+          </div>
+
+          <div class="pub-entry">
+            <p class="authors"><span class="highlight">Perczel, J.</span> (2022)</p>
+            <p class="pub-title">Ruined landscapes: materiality and memory in a Transylvanian village</p>
+            <p class="pub-venue">Critique of Anthropology, 42(1), 78–96.</p>
+            <p class="pub-doi"><a href="#">doi:10.1177/0308275X221089</a></p>
+          </div>
+        </div>
+
+        <!-- Book Chapters -->
+        <div class="pub-group">
+          <h2 class="section-heading">Book Chapters</h2>
+
+          <div class="pub-entry">
+            <p class="authors"><span class="highlight">Perczel, J.</span> (2024)</p>
+            <p class="pub-title">Kinship at the margins: relatedness and rural depopulation in Central Europe</p>
+            <p class="pub-venue">In M. Strathern &amp; A. Kovács (Eds.), <em>Kinship Revisited</em> (pp. 134–158). Berghahn Books.</p>
+          </div>
+
+          <div class="pub-entry">
+            <p class="authors"><span class="highlight">Perczel, J.</span> (2021)</p>
+            <p class="pub-title">The afterlife of institutions: care homes and post-socialist memory</p>
+            <p class="pub-venue">In R. Humphrey (Ed.), <em>Post-Socialist Intimacies</em> (pp. 89–112). Cambridge University Press.</p>
+          </div>
+        </div>
+
+        <!-- Working Papers -->
+        <div class="pub-group">
+          <h2 class="section-heading">Working Papers</h2>
+
+          <div class="pub-entry">
+            <p class="authors"><span class="highlight">Perczel, J.</span> &amp; Németh, E. (2025)</p>
+            <p class="pub-title">Documenting dignity: welfare bureaucracy and the ethics of ethnographic description</p>
+            <p class="pub-venue">Oxford Anthropology Working Paper Series, No. 47.</p>
+          </div>
+
+          <div class="pub-entry">
+            <p class="authors"><span class="highlight">Perczel, J.</span> (2023)</p>
+            <p class="pub-title">Who belongs to the river? Heritage claims and environmental governance in the Danube floodplain</p>
+            <p class="pub-venue">ERC Heritage Futures Working Papers, No. 12.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span>&copy; 2026 Julia Perczel · <a href="mailto:julia.perczel@anthro.ox.ac.uk">julia.perczel@anthro.ox.ac.uk</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var btn = document.querySelector('.menu-toggle');
+      var nav = document.getElementById('nav-list');
+      btn.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open);
+      });
+    })();
+  </script>
+
+</body>
+</html>

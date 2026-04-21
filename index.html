@@ -1,25 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background: #f5f5f5;
-        }
-        h1 {
-            color: #333;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Julia Perczel — Anthropologist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Hello World</h1>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav>
+        <ul class="nav-list" id="nav-list">
+          <li><a href="index.html" class="active">About</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Projects</a>
+            <ul class="dropdown-menu">
+              <li><a href="project-i.html">Project I</a></li>
+              <li><a href="project-ii.html">Project II</a></li>
+            </ul>
+          </li>
+          <li><a href="publications.html">Publications</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <h1>Julia Perczel</h1>
+            <p class="subtitle">Social Anthropologist</p>
+            <p>I am a social anthropologist interested in how communities negotiate belonging, displacement, and cultural continuity. My research draws on long-term ethnographic fieldwork to explore the intersections of kinship, place, and institutional power.</p>
+            <p>Based at the University of Oxford, I teach on the MSc in Social Anthropology and contribute to collaborative projects examining heritage practices across Central Europe.</p>
+          </div>
+          <div>
+            <div class="headshot-placeholder">Photo</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Interests -->
+    <section>
+      <div class="container">
+        <h2 class="section-heading">Research Interests</h2>
+        <ul class="interests-list">
+          <li>Kinship &amp; Relatedness</li>
+          <li>Heritage &amp; Memory</li>
+          <li>Displacement &amp; Belonging</li>
+          <li>Institutional Ethnography</li>
+          <li>Central European Societies</li>
+          <li>Material Culture</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Academic Background -->
+    <section>
+      <div class="container">
+        <h2 class="section-heading">Academic Background</h2>
+        <div class="timeline">
+          <div class="timeline-entry">
+            <div class="timeline-year">2021–present</div>
+            <div class="timeline-desc">
+              <strong>Postdoctoral Researcher</strong>
+              <span>School of Anthropology and Museum Ethnography, University of Oxford</span>
+            </div>
+          </div>
+          <div class="timeline-entry">
+            <div class="timeline-year">2017–2021</div>
+            <div class="timeline-desc">
+              <strong>DPhil in Social Anthropology</strong>
+              <span>University of Oxford</span>
+            </div>
+          </div>
+          <div class="timeline-entry">
+            <div class="timeline-year">2015–2016</div>
+            <div class="timeline-desc">
+              <strong>MPhil in Social Anthropology</strong>
+              <span>University of Cambridge</span>
+            </div>
+          </div>
+          <div class="timeline-entry">
+            <div class="timeline-year">2011–2014</div>
+            <div class="timeline-desc">
+              <strong>BA in Human Sciences</strong>
+              <span>University College London</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section>
+      <div class="container">
+        <h2 class="section-heading">Contact</h2>
+        <div class="contact-grid">
+          <div class="contact-item">
+            <strong>Email</strong>
+            <a href="mailto:julia.perczel@anthro.ox.ac.uk">julia.perczel@anthro.ox.ac.uk</a>
+          </div>
+          <div class="contact-item">
+            <strong>Affiliation</strong>
+            School of Anthropology and Museum Ethnography, University of Oxford
+          </div>
+          <div class="contact-item">
+            <strong>Profiles</strong>
+            <a href="#">ORCID</a> · <a href="#">Google Scholar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span>&copy; 2026 Julia Perczel · <a href="mailto:julia.perczel@anthro.ox.ac.uk">julia.perczel@anthro.ox.ac.uk</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var btn = document.querySelector('.menu-toggle');
+      var nav = document.getElementById('nav-list');
+      btn.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open);
+      });
+    })();
+  </script>
+
 </body>
 </html>
