@@ -4,7 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>E-Waste — Julia Perczel</title>
+  <title>The Value of Waste — Julia Perczel</title>
+  <meta name="description" content="The Value of Waste — Julia Perczel's book project on e-waste recycling and value transformations in India's green transition.">
+  <meta property="og:title" content="The Value of Waste — Julia Perczel">
+  <meta property="og:description" content="A book project on e-waste recycling and value transformations in India's green transition.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='10' fill='%23363636'/><text x='32' y='44' font-family='sans-serif' font-size='34' font-weight='700' fill='%23ffffff' text-anchor='middle'>JP</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap"
@@ -24,7 +29,7 @@
         <ul class="nav-list" id="nav-list">
           <li><a href="index.html">About</a></li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle active">Projects</a>
+            <button type="button" class="dropdown-toggle active" aria-haspopup="true" aria-expanded="false">Projects</button>
             <ul class="dropdown-menu">
               <li><a href="e-waste.html" class="active">E-Waste</a></li>
               <li><a href="himalayan-waste.html">Himalayan Waste</a></li>
@@ -39,7 +44,7 @@
   <main>
     <section class="page-header">
       <div class="container">
-        <h1>The value of E-waste</h1>
+        <h1>The Value of Waste</h1>
         <p class="subtitle">Value transformations in the e-waste sphere in India’s green transition</p>
       </div>
     </section>
@@ -47,7 +52,7 @@
     <section class="project-hero-image">
       <div class="container">
         <img src="images/e-waste-hero.jpg" alt="A pile of assorted electronic components" class="project-hero">
-        <p class="hero-credit">Photo: <a href="https://unsplash.com/photos/G09BIFdUAGU">Nathan Cima / Unsplash</a></p>
+        <p class="hero-credit">Photo: <a href="https://unsplash.com/photos/G09BIFdUAGU" target="_blank" rel="noopener">Nathan Cima / Unsplash</a></p>
       </div>
     </section>
 
@@ -74,20 +79,6 @@
           specific strategies of scrap traders in pursuit of social mobility and the unmarked sphere of environmental
           responsibility in the Indian capital.</p>
 
-        <!-- <div class="detail-cards">
-          <div class="detail-card">
-            <strong>Funder</strong>
-            European Research Council (ERC)
-          </div>
-          <div class="detail-card">
-            <strong>Duration</strong>
-            2022–2025
-          </div>
-          <div class="detail-card">
-            <strong>Collaborators</strong>
-            Prof. A. Kovács (Budapest), Dr. M. Dragomir (Cluj-Napoca)
-          </div>
-        </div> -->
       </div>
     </section>
 
@@ -99,7 +90,7 @@
           <p class="authors"><span class="highlight">Perczel, J.</span> (2024)</p>
           <p class="pub-title">E-waste is toxic, but for whom? The body politics of knowing toxic flows in Delhi</p>
           <p class="pub-venue">Environment and Planning C: Politics and Space, 42(1), 64–79.</p>
-          <p class="pub-doi"><a href="https://doi.org/10.1177/23996544231188653">doi:10.1177/23996544231188653</a>
+          <p class="pub-doi"><a href="https://doi.org/10.1177/23996544231188653" target="_blank" rel="noopener">doi:10.1177/23996544231188653</a>
           </p>
         </div>
 
@@ -109,15 +100,15 @@
             Wastelands in Chen Qiufan's <em>Waste Tide</em></p>
           <p class="pub-venue">Revenant.</p>
           <p class="pub-doi"><a
-              href="https://www.revenantjournal.com/contents/re-enchantment-with-the-waste-of-the-world-expressing-futures-and-representing-wastelands-in-chen-qiufans-waste-tide/">Read
-              online</a></p>
+              href="https://www.revenantjournal.com/contents/re-enchantment-with-the-waste-of-the-world-expressing-futures-and-representing-wastelands-in-chen-qiufans-waste-tide/"
+              target="_blank" rel="noopener">Read online</a></p>
         </div>
 
         <div class="pub-entry">
           <p class="authors"><span class="highlight">Perczel, J.</span> (2021)</p>
           <p class="pub-title">Where is toxicity located? Side glances through fieldwork in a toxic place</p>
           <p class="pub-venue">Anthropology Today, 37(4), 27–30.</p>
-          <p class="pub-doi"><a href="https://doi.org/10.1111/1467-8322.12668">doi:10.1111/1467-8322.12668</a></p>
+          <p class="pub-doi"><a href="https://doi.org/10.1111/1467-8322.12668" target="_blank" rel="noopener">doi:10.1111/1467-8322.12668</a></p>
         </div>
 
         <p class="pub-more"><a href="publications.html">Full publication list →</a></p>
@@ -140,6 +131,25 @@
       btn.addEventListener('click', function () {
         var open = nav.classList.toggle('open');
         btn.setAttribute('aria-expanded', open);
+      });
+
+      document.querySelectorAll('.dropdown-toggle').forEach(function (toggle) {
+        toggle.addEventListener('click', function (e) {
+          e.preventDefault();
+          var dropdown = toggle.closest('.dropdown');
+          var open = dropdown.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', open);
+        });
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!e.target.closest('.dropdown')) {
+          document.querySelectorAll('.dropdown.open').forEach(function (d) {
+            d.classList.remove('open');
+            var t = d.querySelector('.dropdown-toggle');
+            if (t) t.setAttribute('aria-expanded', 'false');
+          });
+        }
       });
     })();
   </script>

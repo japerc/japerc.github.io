@@ -4,7 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Himalayan Waste — Julia Perczel</title>
+  <title>The world's highest rubbish dump — Julia Perczel</title>
+  <meta name="description" content="The world's highest rubbish dump — Julia Perczel's Leverhulme-funded project on waste and the Himalayan Anthropocene.">
+  <meta property="og:title" content="The world's highest rubbish dump — Julia Perczel">
+  <meta property="og:description" content="A Leverhulme-funded ethnographic project on waste and the Himalayan Anthropocene.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='10' fill='%23363636'/><text x='32' y='44' font-family='sans-serif' font-size='34' font-weight='700' fill='%23ffffff' text-anchor='middle'>JP</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap"
@@ -24,7 +29,7 @@
         <ul class="nav-list" id="nav-list">
           <li><a href="index.html">About</a></li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle active">Projects</a>
+            <button type="button" class="dropdown-toggle active" aria-haspopup="true" aria-expanded="false">Projects</button>
             <ul class="dropdown-menu">
               <li><a href="e-waste.html">E-Waste</a></li>
               <li><a href="himalayan-waste.html" class="active">Himalayan Waste</a></li>
@@ -47,7 +52,7 @@
     <section class="project-hero-image">
       <div class="container">
         <img src="images/himalayan-hero.jpg" alt="Snow-covered rocky mountain" class="project-hero">
-        <p class="hero-credit">Photo: <a href="https://unsplash.com/photos/amAhBrvmVQc">Sylwia Bartyzel / Unsplash</a></p>
+        <p class="hero-credit">Photo: <a href="https://unsplash.com/photos/amAhBrvmVQc" target="_blank" rel="noopener">Sylwia Bartyzel / Unsplash</a></p>
       </div>
     </section>
 
@@ -65,7 +70,7 @@
           commodities and leaving without taking their waste along. At the heart of the problem lies the entry of new
           materials into a social, environmental, and geological terrain with unique challenges for managing
           environmental consequences.</p>
-        <p>The introduced of the extended producer responsibility (EPR) legal framework attempts to force plastic
+        <p>The introduction of the extended producer responsibility (EPR) legal framework attempts to force plastic
           producer companies to take responsibility for the proliferation of waste. The policy enacts the radical idea
           that producers should take responsibility for the after-effects of consumption. Yet, the practicalities for
           the logistics of processing and removal reveal the region’s inadequate connectivity and lack of appropriate
@@ -100,12 +105,6 @@
       </div>
     </section>
 
-    <section>
-      <div class="container">
-        <h2 class="section-heading">Related Publications</h2>
-        <p class="pub-more"><a href="publications.html">Full publication list →</a></p>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">
@@ -123,6 +122,25 @@
       btn.addEventListener('click', function () {
         var open = nav.classList.toggle('open');
         btn.setAttribute('aria-expanded', open);
+      });
+
+      document.querySelectorAll('.dropdown-toggle').forEach(function (toggle) {
+        toggle.addEventListener('click', function (e) {
+          e.preventDefault();
+          var dropdown = toggle.closest('.dropdown');
+          var open = dropdown.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', open);
+        });
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!e.target.closest('.dropdown')) {
+          document.querySelectorAll('.dropdown.open').forEach(function (d) {
+            d.classList.remove('open');
+            var t = d.querySelector('.dropdown-toggle');
+            if (t) t.setAttribute('aria-expanded', 'false');
+          });
+        }
       });
     })();
   </script>
