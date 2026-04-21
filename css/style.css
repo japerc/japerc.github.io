@@ -242,11 +242,8 @@ section+section {
   padding: 3.5rem 0;
 }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 280px;
-  gap: 3rem;
-  align-items: start;
+.hero .container {
+  display: flow-root;
 }
 
 .hero h1 {
@@ -259,16 +256,47 @@ section+section {
   margin-bottom: 1.5rem;
 }
 
-.headshot-placeholder {
-  width: 100%;
+.profile-image {
+  float: left;
+  width: 220px;
   aspect-ratio: 3 / 4;
-  background: var(--border);
+  margin: 0.25rem 1.75rem 1rem 0;
   border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  object-fit: cover;
+  display: block;
+}
+
+.project-hero-image {
+  padding: 1.5rem 0 0;
+}
+
+.project-hero-image+section {
+  border-top: none;
+}
+
+.project-hero {
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  border-radius: 6px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-credit {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  font-size: 0.8rem;
+  font-style: italic;
   color: var(--text-secondary);
-  font-size: 0.85rem;
+  text-align: right;
+}
+
+.hero-credit a {
+  color: var(--text-secondary);
+}
+
+.hero-credit a:hover {
+  color: var(--primary);
 }
 
 /* ── Section heading underline ── */
@@ -477,12 +505,13 @@ section+section {
     display: none;
   }
 
-  .hero-grid {
-    grid-template-columns: 1fr;
+  .profile-image {
+    width: 140px;
+    margin: 0.25rem 1rem 0.75rem 0;
   }
 
-  .headshot-placeholder {
-    max-width: 220px;
+  .project-hero {
+    aspect-ratio: 16 / 9;
   }
 
   .timeline-entry {
